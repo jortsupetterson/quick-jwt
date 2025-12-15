@@ -3,6 +3,7 @@
 Minimal ES256 JWT signer/verifier that pulls public keys from your JWKS endpoint. No custom claims, no middlemen—just subjects, issuers, and keys.
 
 **Highlights**
+
 - Opinionated: ES256 only, compact JWTs, subjects-only payloads
 - JWKS native: verification fetches `https://<iss>/.well-known/jwks.json`
 - Type-safe: bundled TypeScript defs for IntelliSense/IntelliCode
@@ -31,7 +32,7 @@ const { privateJwk, publicJwk } = await generateKeyset();
 
 // Create & sign a token (exp is seconds from now or an epoch in ms)
 const token = await JWT.sign(
-  { ...privateJwk, kid },
+  privateJwk,
   new JWT(kid, issuer, subject, 60) // 60 seconds from now
 );
 
@@ -40,7 +41,7 @@ const token = await JWT.sign(
 // For tests/local dev, mock fetch with your public key:
 global.fetch = async () => ({
   ok: true,
-  json: async () => ({ keys: [{ ...publicJwk, kid }] }),
+  json: async () => ({ keys: [{ kid, ...publicJwk }] }),
 });
 
 const verifiedSub = await JWT.verify(token);

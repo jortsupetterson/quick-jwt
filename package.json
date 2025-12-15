@@ -1,6 +1,6 @@
 {
   "name": "quick-jwt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimal ES256 JWT signer and verifier that pulls public keys from your JWKS endpoint.",
   "keywords": [
     "jwt",
@@ -44,7 +44,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "bytecodec": "^1.2.0",
-    "zeyra": "^1.0.0"
+    "bytecodec": "^1.2.1",
+    "zeyra": "^1.0.1"
   }
 }
