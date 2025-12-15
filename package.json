@@ -27,12 +27,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jorts/quick-jwt.git"
+    "url": "git+https://github.com/jortsupetterson/quick-jwt.git"
   },
   "bugs": {
-    "url": "https://github.com/jorts/quick-jwt/issues"
+    "url": "https://github.com/jortsupetterson/quick-jwt/issues"
   },
-  "homepage": "https://github.com/jorts/quick-jwt#readme",
+  "homepage": "https://github.com/jortsupetterson/quick-jwt#readme",
   "files": [
     "src",
     "types",
