@@ -1,0 +1,50 @@
+{
+  "name": "quick-jwt",
+  "version": "1.0.0",
+  "description": "Minimal ES256 JWT signer and verifier that pulls public keys from your JWKS endpoint.",
+  "keywords": [
+    "jwt",
+    "jwk",
+    "jwks",
+    "es256",
+    "auth",
+    "zeyra"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js && node benchmark/bench.js",
+    "bench": "node benchmark/bench.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorts/quick-jwt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jorts/quick-jwt/issues"
+  },
+  "homepage": "https://github.com/jorts/quick-jwt#readme",
+  "files": [
+    "src",
+    "types",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bytecodec": "^1.2.0",
+    "zeyra": "^1.0.0"
+  }
+}
