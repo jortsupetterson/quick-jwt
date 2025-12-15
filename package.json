@@ -1,6 +1,6 @@
 {
   "name": "quick-jwt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal ES256 JWT signer and verifier that pulls public keys from your JWKS endpoint.",
   "keywords": [
     "jwt",
